@@ -29,6 +29,7 @@ body {
 #nav {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
 /* header search bar section */
 #search-bar {
     max-width: 600px;
@@ -47,13 +48,15 @@ body {
 }
 
 /* meal card */
-#card{
+.card{
+    max-height:35rem;
+    width: 20rem;
     margin-bottom: 20px;
     /* for round edges(value given) */
     border-radius: 10px;
     overflow: hidden;
 }
-#card img{
+.card img{
     height: 100%;
     width: 100%;
     /* for greyscale */
@@ -61,18 +64,21 @@ body {
     box-shadow: 0 0 20px #333;
     object-fit: cover;
 }
-#card:hover{
+/* when hover images will be colored */
+.card:hover{
     transform: scale(1.03);
     filter: drop-shadow(0 0 10px #333);
     transition: 0.5s;
 }
-/* when hover images will be colored */
-#card:hover img{
+
+.card:hover img{
     filter: grayscale(0%);
 }
+
 .card-body {
     color: #212529;
 }
+/* Mode Details button */
 .btn-pink{
     background-color: #e84949;
     padding: 0.8rem 2.3rem;
@@ -103,4 +109,69 @@ body {
 }
 .btn{
     height: 100%;
+}
+
+/* meal details container */
+#meal-details{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+#meal-header{
+    width: 70%;
+    margin: auto;
+}
+#meal-thumbnail img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+#details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+}
+#meal-instruction{
+    margin: auto;
+    text-align: center;
+}
+
+
+/* favourites offcanvus */
+#favourites-body{
+    background-color:#212529 ;
+}
+
+/* For smaller screen */
+@media (max-width: 300px) {
+    /* :root {
+        --head: 1.3rem;
+        --text: 0.9rem;
+    } */
+
+    .card {
+        margin: 1em;
+        max-width: 200px;
+    }
+
+    .btn-pink {
+        font-size: 15px;
+        padding: 0.6em 0;
+    }
+    #search-bar {
+        max-width: 100%;
+    }
+}
+
+/* For PC & HD+ screen */
+@media (min-width: 600px) {
+    .card {
+        /* display: flex; */
+        max-width: 700px;
+    }
+    #search-bar {
+        max-width: 500px;
+    }
 }
