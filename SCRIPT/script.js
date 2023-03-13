@@ -1,3 +1,4 @@
+
 // its fetch meals from api and return it
 async function fetchMealsFromApi(url,value) {
     const response=await fetch(`${url+value}`);
@@ -70,4 +71,5 @@ function showMealList(){
         document.getElementById("main").innerHTML = html;
     });
 }
+
 
