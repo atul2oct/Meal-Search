@@ -30,7 +30,7 @@ function showMealList(){
                 }
                 if (isFav) {
                     html += `
-                <div id="card" class="card mb-3" style="width: 20rem;">
+                <div id="card" class="card mb-3">
                     <img src="${element.strMealThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${element.strMeal}</h5>
@@ -43,7 +43,7 @@ function showMealList(){
                 `;
                 } else {
                     html += `
-                <div id="card" class="card mb-3" style="width: 20rem;">
+                <div id="card" class="card mb-3">
                     <img src="${element.strMealThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${element.strMeal}</h5>
@@ -86,7 +86,7 @@ async function showMealDetails(id) {
         html += `
             <div id="meal-details" class="mb-5">
                 <div id="meal-header" class="d-flex justify-content-around flex-wrap">
-                <div id="meal-thumbail">
+                <div id="meal-thumbnail">
                     <img class="mb-2" src="${data.meals[0].strMealThumb}" alt="" srcset="">
                 </div>
                 <div id="details">
@@ -135,7 +135,7 @@ async function showFavMealList() {
         for (let index = 0; index < arr.length; index++) {
             await fetchMealsFromApi(url,arr[index]).then(data=>{
                 html += `
-                <div id="card" class="card mb-3" style="width: 20rem; ">
+                <div id="card" class="card mb-3">
                     <img src="${data.meals[0].strMealThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${data.meals[0].strMeal}</h5>
