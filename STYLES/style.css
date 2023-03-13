@@ -29,3 +29,78 @@ body {
 #nav {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+/* header search bar section */
+#search-bar {
+    max-width: 600px;
+}
+
+#search-bar input {
+    height: 50px;
+    border-radius: 20px;
+}
+.sticky {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 5%;
+    z-index: 99;
+}
+
+/* meal card */
+#card{
+    margin-bottom: 20px;
+    /* for round edges(value given) */
+    border-radius: 10px;
+    overflow: hidden;
+}
+#card img{
+    height: 100%;
+    width: 100%;
+    /* for greyscale */
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+#card:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px #333);
+    transition: 0.5s;
+}
+/* when hover images will be colored */
+#card:hover img{
+    filter: grayscale(0%);
+}
+.card-body {
+    color: #212529;
+}
+.btn-pink{
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative;
+    z-index: 1;
+}
+.btn-pink::before{
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    z-index: -1;
+}
+.btn-pink:hover:before{
+    transform: scaleX(1);
+}
+.btn-pink:hover {
+    color: #fff;
+}
+.btn{
+    height: 100%;
+}
