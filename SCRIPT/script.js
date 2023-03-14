@@ -11,8 +11,7 @@ async function fetchMealsFromApi(url,value) {
 }
 
 
-
-// its show's all meals card in main acording to search input value
+// its show's all meals card in main according to search input value
 function showMealList(){
     let inputValue = document.getElementById("my-search").value;
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
@@ -62,10 +61,10 @@ function showMealList(){
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-12 text-center">
-                            <span class="display-1 d-block">404</span>
                             <div class="mb-4 lead">
                                 The meal you are looking for was not found.
                             </div>
+                            <span class="blockquote d-block">Search like egg, veg, cake etc...</span>
                         </div>
                     </div>
                 </div>
@@ -75,7 +74,6 @@ function showMealList(){
         document.getElementById("main").innerHTML = html;
     });
 }
-
 
 
 //its shows full meal details in main
@@ -110,8 +108,7 @@ async function showMealDetails(id) {
 
 
 
-
-// its shows all favourites meals in favourites body
+// its shows all favorite meals in favourites body
 async function showFavMealList() {
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
     let url="https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
@@ -122,10 +119,10 @@ async function showFavMealList() {
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-12 text-center">
-                            <span class="display-1 d-block">404</span>
                             <div class="mb-4 lead">
                                 No meal added in your favourites list.
                             </div>
+                            <span class="blockquote d-block">Don't you like food.</span>
                         </div>
                     </div>
                 </div>
@@ -153,10 +150,6 @@ async function showFavMealList() {
 }
 
 
-
-
-
-
 //its adds and remove meals to favourites list
 function addRemoveToFavList(id) {
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
@@ -178,5 +171,3 @@ function addRemoveToFavList(id) {
     showMealList();
     showFavMealList();
 }
-
-
