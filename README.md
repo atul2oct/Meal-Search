@@ -1,7 +1,6 @@
 # Meal-Search
-https://atul2oct.github.io/Meal-Search/
 Searching meal app to store and search meals using html, css, css framework like Bootstrapand  ONLY vanilla javascript, no libraries or frameworks.
-Home Page:
+Home Page:-->>> https://atul2oct.github.io/Meal-Search/
   Search any meal from the API(https://www.themealdb.com/api.php) and display the search results on the frontend (as I type the search results should update).
   ![Screenshot (612)](https://user-images.githubusercontent.com/55950948/224974718-f69d05a7-9bc7-412c-b376-1f0c0744a389.png)
 
