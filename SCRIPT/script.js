@@ -100,7 +100,7 @@ async function showMealDetails(id) {
                 <p>${data.meals[0].strInstructions}</p>
                 </div>
                 <div class="text-center">
-                <a href="${data.meals[0].strYoutube}" target="_blank" class="btn btn-outline-secondary mt-3">Watch Video</a>
+                <a href="${data.meals[0].strYoutube}" target="_blank" class="btn btn-light btn-outline-secondary mt-3">Watch Video</a>
                 </div>
             </div>
         `;
